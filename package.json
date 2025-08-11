@@ -1,0 +1,33 @@
+{
+  "name": "stripe-promo-generator",
+  "version": "1.0.0",
+  "description": "Runs the client and server together",
+  "main": "index.js",
+  "bin": "server/index.js",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "server": "npm start --prefix server",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "build:client": "npm run build --prefix client",
+    "build:exe": "npm run build:client && pkg .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "pkg": {
+    "assets": [
+      "client/build/**/*"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "dependencies": {
+    "pkg": "^5.8.1"
+  }
+}
