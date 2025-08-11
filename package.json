@@ -1,5 +1,5 @@
 {
-  "name": "stripe-promo-generator",
+  "name": "stripe-code-generator",
   "version": "1.0.0",
   "description": "Runs the client and server together",
   "main": "index.js",
